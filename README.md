@@ -38,13 +38,10 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
 
-[<img src='walkthrough-poster.png' title='Video Walkthrough' width='' alt='Video Walkthrough' />](walkthrough.mp4)
+https://github.com/user-attachments/assets/47bee0c6-7409-4b74-9ac1-b0cebed0603f
 
-Click the image or open [walkthrough.mp4](walkthrough.mp4) to play the walkthrough.
 
-Video recorded with the macOS screen recorder and compressed with ffmpeg
 
 ## Notes
 
