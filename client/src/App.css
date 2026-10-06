@@ -1,33 +1,142 @@
 .app {
-    background: url('./assets/unitygrid.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-header {
-    padding: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.main-header,
+.app > main,
+.main-footer {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .main-header {
-    height: 30vh;
-    width: 85vw;
-    align-items: flex-end;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  padding-top: 32px;
+  padding-bottom: 28px;
+}
+
+.brand,
+.brand:hover,
+.brand:focus {
+  text-decoration: none;
+  background: none;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  line-height: 1.1;
+}
+
+.brand p {
+  margin: 4px 0 0;
+  color: var(--mist);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
 }
 
 .header-buttons {
-    width: 30%;
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  gap: 8px;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(18, 40, 61, 0.7);
 }
 
-.header-buttons button {
-    margin-right: 20px;
-    margin-left: 20px;
+.header-buttons a {
+  margin: 0;
+  padding: 8px 20px;
+  border-radius: 999px;
+  color: var(--cream);
+  font-weight: 700;
+  text-decoration: none;
+  background: none;
+}
+
+.header-buttons a:hover {
+  background: var(--panel-raised);
+}
+
+.header-buttons a.active {
+  background: var(--lamp);
+  color: var(--ink);
+}
+
+.app > main {
+  flex: 1;
+  padding-bottom: 56px;
+}
+
+.main-footer {
+  padding-top: 20px;
+  padding-bottom: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.main-footer p {
+  margin: 0;
+  color: var(--mist);
+  font-size: 0.85rem;
+}
+
+.page-heading {
+  margin: 8px 0 24px;
+  max-width: 640px;
+}
+
+.page-heading h2 {
+  margin: 0 0 6px;
+  font-size: 1.9rem;
+}
+
+.page-heading p {
+  margin: 0;
+  color: var(--mist);
+}
+
+.status-message {
+  margin: 0;
+  padding: 28px 24px;
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  color: var(--mist);
+  text-align: center;
+}
+
+.event-list section + section {
+  margin-top: 40px;
+}
+
+.event-list-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  font-size: 1.35rem;
+}
+
+.event-list-heading span {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--panel-raised);
+  color: var(--mist);
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .brand h1 {
+    font-size: 1.9rem;
+  }
 }

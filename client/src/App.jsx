@@ -1,8 +1,9 @@
 import React from 'react'
-import { useRoutes, Link } from 'react-router-dom'
+import { useRoutes, Link, NavLink } from 'react-router-dom'
 import Locations from './pages/Locations'
 import LocationEvents from './pages/LocationEvents'
 import Events from './pages/Events'
+import NotFound from './pages/NotFound'
 import './App.css'
 
 const App = () => {
@@ -12,24 +13,16 @@ const App = () => {
       element: <Locations />
     },
     {
-      path: '/echolounge',
-      element: <LocationEvents index={1} />
-    },
-    {
-      path: '/houseofblues',
-      element: <LocationEvents index={2} />
-    },
-    {
-      path: '/pavilion',
-      element: <LocationEvents index={3} />
-    },
-    {
-      path: '/americanairlines',
-      element: <LocationEvents index={4} />
+      path: '/locations/:slug',
+      element: <LocationEvents />
     },
     {
       path: '/events',
       element: <Events />
+    },
+    {
+      path: '*',
+      element: <NotFound />
     }
   ])
 
@@ -37,17 +30,24 @@ const App = () => {
     <div className='app'>
 
       <header className='main-header'>
-        <h1>UnityGrid Plaza</h1>
+        <Link to='/' className='brand'>
+          <h1>Harborlight Commons</h1>
+          <p>Find something to do on the waterfront</p>
+        </Link>
 
-        <div className='header-buttons'>
-          <Link to='/' role='button'>Home</Link>
-          <Link to='/events' role='button'>Events</Link>
-        </div>
+        <nav className='header-buttons'>
+          <NavLink to='/' end>Map</NavLink>
+          <NavLink to='/events'>All events</NavLink>
+        </nav>
       </header>
 
       <main>
         {element}
       </main>
+
+      <footer className='main-footer'>
+        <p>Harborlight is an imagined town. The neighbors are real in spirit.</p>
+      </footer>
     </div>
   )
 }

@@ -1,0 +1,39 @@
+.event-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.filter-chip {
+  --accent: var(--cream);
+  width: auto;
+  margin: 0;
+  padding: 8px 18px;
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  background: transparent;
+  box-shadow: none;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filter-chip:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  color: var(--accent);
+}
+
+.filter-chip[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--ink);
+}
+
+.event-total {
+  margin: 0 0 28px;
+  color: var(--mist);
+  font-size: 0.9rem;
+}
